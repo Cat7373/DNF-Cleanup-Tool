@@ -51,23 +51,23 @@ del /f /q %windir%\system32\TesSafe.sys 2>nul
 mkdir %windir%\system32\TesSafe.sys\ 1>nul 2>nul
 
 if exist "%DNFInstallPath%" (
-	del /f /q %DNFInstallPath%\Tenparty.dat 2>nul
-	del /f /q %DNFInstallPath%\TenSLX.dat 2>nul
-	del /f /q %DNFInstallPath%\TenSP.dat 2>nul
-	del /f /q %DNFInstallPath%\TenSRL.dat 2>nul
-	del /f /q %DNFInstallPath%\tseloder.dat 2>nul
-	del /f /q %DNFInstallPath%\tsengine.dat 2>nul
-	del /f /q %DNFInstallPath%\tsepb.dat 2>nul
-	del /f /q %DNFInstallPath%\tsgscan.dat 2>nul
-	del /f /q %DNFInstallPath%\LagLog.txt 2>nul
-	del /f /q %DNFInstallPath%\start\TenProtect\TenSLX2.dat 2>nul
-	
-	del /f /s /q %DNFInstallPath%\*.log 2>nul
-	del /f /s /q %DNFInstallPath%\*.bak 2>nul
-	del /f /s /q %DNFInstallPath%\*.dmp.z 2>nul
-	del /f /s /q %DNFInstallPath%\Logs\*.* 2>nul
-	del /f /s /q %DNFInstallPath%\start\Cross\Logs\*.* 2>nul
-	del /f /s /q %DNFInstallPath%\TCLS\tlog\*.* 2>nul
+    del /f /q %DNFInstallPath%\Tenparty.dat 2>nul
+    del /f /q %DNFInstallPath%\TenSLX.dat 2>nul
+    del /f /q %DNFInstallPath%\TenSP.dat 2>nul
+    del /f /q %DNFInstallPath%\TenSRL.dat 2>nul
+    del /f /q %DNFInstallPath%\tseloder.dat 2>nul
+    del /f /q %DNFInstallPath%\tsengine.dat 2>nul
+    del /f /q %DNFInstallPath%\tsepb.dat 2>nul
+    del /f /q %DNFInstallPath%\tsgscan.dat 2>nul
+    del /f /q %DNFInstallPath%\LagLog.txt 2>nul
+    del /f /q %DNFInstallPath%\start\TenProtect\TenSLX2.dat 2>nul
+    
+    del /f /s /q %DNFInstallPath%\*.log 2>nul
+    del /f /s /q %DNFInstallPath%\*.bak 2>nul
+    del /f /s /q %DNFInstallPath%\*.dmp.z 2>nul
+    del /f /s /q %DNFInstallPath%\Logs\*.* 2>nul
+    del /f /s /q %DNFInstallPath%\start\Cross\Logs\*.* 2>nul
+    del /f /s /q %DNFInstallPath%\TCLS\tlog\*.* 2>nul
   del /f /s /q %DNFInstallPath%\TesSafe.sys 2>nul
 )
 
