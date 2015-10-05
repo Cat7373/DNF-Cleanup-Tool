@@ -5,7 +5,7 @@ echo ==========================
 echo =      DNF清理工具       =
 echo = By:Cat73 QQ:1901803382 =
 rem 版本号规则: 更新日期_总第几次更新
-echo =    Ver.20151001_012    =
+echo =    Ver.20151004_013    =
 echo ==========================
 echo.
 
@@ -31,12 +31,17 @@ tasklist | find /i "dnf.exe" 1>nul 2>nul && set /p killdnf=是否关闭DNF后清理？(y
 if "%killdnf%" == "y" (
     taskkill /f /im dnf.exe 2>nul
 )
-taskkill /f /im Tensafe_1.exe 2>nul
-taskkill /f /im Tensafe_2.exe 2>nul
+
+taskkill /f /im QQLOING.exe 2>nul
+taskkill /f /im DNFchina.exe 2>nul
+taskkill /f /im TenSafe.exe 2>nul
+taskkill /f /im TenSafe_1.exe 2>nul
+taskkill /f /im TenSafe_2.exe 2>nul
 taskkill /f /im TP3Helper.exe 2>nul
+taskkill /f /im TXPlatform.exe 2>nul
 taskkill /f /im QQDL.exe 2>nul
 taskkill /f /im TenioDL.exe 2>nul
-taskkill /f /im Tencentdl.exe 2>nul
+taskkill /f /im tencentdl.exe 2>nul
 
 ping 127.0.0.1 -n 2 1>nul 2>nul
 
