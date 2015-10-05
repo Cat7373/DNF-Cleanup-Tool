@@ -14,7 +14,7 @@ echo 正在清理DNF文件...
 rem 获取DNF路径
 reg query HKEY_CURRENT_USER\SOFTWARE\Tencent\DNF /v InstallPath > %Temp%\_readreg.dat
 for /f "tokens=3*" %%a in (%temp%\_readreg.dat) do (
-  SET DNFInstallPath=%%a
+    SET DNFInstallPath=%%a
 )
 del /f /q "%Temp%.\_readreg.dat"
 if exist "%DNFInstallPath%" (
@@ -68,7 +68,7 @@ if exist "%DNFInstallPath%" (
     del /f /s /q %DNFInstallPath%\Logs\*.* 2>nul
     del /f /s /q %DNFInstallPath%\start\Cross\Logs\*.* 2>nul
     del /f /s /q %DNFInstallPath%\TCLS\tlog\*.* 2>nul
-  del /f /s /q %DNFInstallPath%\TesSafe.sys 2>nul
+    del /f /s /q %DNFInstallPath%\TesSafe.sys 2>nul
 )
 
 del /f /s /q %userprofile%\AppData\LocalLow\DNF\*.* 2>nul
