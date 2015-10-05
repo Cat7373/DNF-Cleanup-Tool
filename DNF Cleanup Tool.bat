@@ -1,33 +1,33 @@
 @echo off
 color 3A
-title DNFæ¸…ç†å·¥å…· By:Cat73 QQ:1901803382
+title DNFÇåÀí¹¤¾ß By:Cat73 QQ:1901803382
 echo ==========================
-echo =      DNFæ¸…ç†å·¥å…·       =
+echo =      DNFÇåÀí¹¤¾ß       =
 echo = By:Cat73 QQ:1901803382 =
-rem ç‰ˆæœ¬å·è§„åˆ™: æ›´æ–°æ—¥æœŸ_æ€»ç¬¬å‡ æ¬¡æ›´æ–°
+rem °æ±¾ºÅ¹æÔò: ¸üÐÂÈÕÆÚ_×ÜµÚ¼¸´Î¸üÐÂ
 echo =    Ver.20151005_014    =
 echo ==========================
 echo.
 
-echo æ­£åœ¨æ¸…ç†DNFæ–‡ä»¶...
+echo ÕýÔÚÇåÀíDNFÎÄ¼þ...
 
-rem èŽ·å–DNFè·¯å¾„
+rem »ñÈ¡DNFÂ·¾¶
 reg query HKEY_CURRENT_USER\SOFTWARE\Tencent\DNF /v InstallPath > %Temp%\_readreg.dat
 for /f "tokens=3*" %%a in (%temp%\_readreg.dat) do (
-    SET DNFInstallPath=%%a
+    set DNFInstallPath=%%a
 )
-del /f /q "%Temp%.\_readreg.dat"
+del /f /q "%Temp%\_readreg.dat"
 if exist "%DNFInstallPath%" (
-    echo æˆåŠŸèŽ·å–DNFå®‰è£…è·¯å¾„: %DNFInstallPath%
+    echo ³É¹¦»ñÈ¡DNF°²×°Â·¾¶: %DNFInstallPath%
 ) else (
-    echo èŽ·å–DNFå®‰è£…è·¯å¾„å¤±è´¥ï¼Œå¯èƒ½æœ‰éƒ¨åˆ†æ–‡ä»¶æ— æ³•æ¸…ç†ã€‚
+    echo »ñÈ¡DNF°²×°Â·¾¶Ê§°Ü£¬¿ÉÄÜÓÐ²¿·ÖÎÄ¼þÎÞ·¨ÇåÀí¡£
 )
-rem èŽ·å–DNFè·¯å¾„å®Œæˆ
+rem »ñÈ¡DNFÂ·¾¶Íê³É
 
-rem DNFä¸“ç”¨æ¸…ç†
+rem DNF×¨ÓÃÇåÀí
 set killdnf="n"
-tasklist | find /i "dnf.exe" 1>nul 2>nul && echo æ£€æµ‹åˆ°DNFæ­£åœ¨è¿è¡Œï¼Œå¯èƒ½æœ‰éƒ¨åˆ†æ–‡ä»¶æ— æ³•æ¸…ç†ã€‚
-tasklist | find /i "dnf.exe" 1>nul 2>nul && set /p killdnf=æ˜¯å¦å…³é—­DNFåŽæ¸…ç†ï¼Ÿ(y/n):
+tasklist | find /i "dnf.exe" 1>nul 2>nul && echo ¼ì²âµ½DNFÕýÔÚÔËÐÐ£¬¿ÉÄÜÓÐ²¿·ÖÎÄ¼þÎÞ·¨ÇåÀí¡£
+tasklist | find /i "dnf.exe" 1>nul 2>nul && set /p killdnf=ÊÇ·ñ¹Ø±ÕDNFºóÇåÀí£¿(y/n):
 if "%killdnf%" == "y" (
     taskkill /f /im dnf.exe 2>nul
 )
@@ -72,29 +72,29 @@ if exist "%DNFInstallPath%" (
 )
 
 del /f /s /q %userprofile%\AppData\LocalLow\DNF\*.* 2>nul
-rem DNFä¸“ç”¨æ¸…ç†å®Œæˆ
+rem DNF×¨ÓÃÇåÀíÍê³É
 
-echo DNFæ–‡ä»¶æ¸…ç†å®Œæ¯•!
-echo æ­£åœ¨æ¸…ç†å¸¸è§ç³»ç»Ÿåžƒåœ¾(å› æ–‡ä»¶è¾ƒå¤šæ‰€ä»¥æ— åˆ é™¤æˆåŠŸæç¤ºï¼Œå¹¶ä¸æ˜¯ä¸å·¥ä½œ)
+echo DNFÎÄ¼þÇåÀíÍê±Ï!
+echo ÕýÔÚÇåÀí³£¼ûÏµÍ³À¬»ø(ÒòÎÄ¼þ½Ï¶àËùÒÔÎÞÉ¾³ý³É¹¦ÌáÊ¾£¬²¢²»ÊÇ²»¹¤×÷)
 
-rem å¸¸è§ç³»ç»Ÿåžƒåœ¾æ¸…ç†
-echo æ­£åœ¨æ¸…ç†ä¸´æ—¶æ–‡ä»¶ã€å¤‡ä»½æ–‡ä»¶å’Œé¢„ç¼“å­˜è„šæœ¬... 
+rem ³£¼ûÏµÍ³À¬»øÇåÀí
+echo ÕýÔÚÇåÀíÁÙÊ±ÎÄ¼þ¡¢±¸·ÝÎÄ¼þºÍÔ¤»º´æ½Å±¾... 
 del /f /s /q %windir%\*.bak 1>nul 2>nul
 del /f /s /q %windir%\prefetch\*.* 1>nul 2>nul
 del /f /s /q %windir%\temp\*.* 1>nul 2>nul
 del /f /s /q %temp%\*.* 1>nul 2>nul
 
-echo æ­£åœ¨æ¸…ç†IEä¸´æ—¶æ–‡ä»¶ç›®å½•... 
+echo ÕýÔÚÇåÀíIEÁÙÊ±ÎÄ¼þÄ¿Â¼... 
 del /f /s /q "%userprofile%\Local Settings\Temporary Internet Files\*.*" 1>nul 2>nul
 
-echo æ­£åœ¨æ¸…ç†ç³»ç»Ÿä¸´æ—¶æ–‡ä»¶ *.tmp *._tmp *.log *.chk *.old ï¼Œè¯·ç¨ç­‰... 
+echo ÕýÔÚÇåÀíÏµÍ³ÁÙÊ±ÎÄ¼þ *.tmp *._tmp *.log *.chk *.old £¬ÇëÉÔµÈ... 
 del /f /s /q %systemdrive%\*.tmp 1>nul 2>nul
 del /f /s /q %systemdrive%\*._mp 1>nul 2>nul
 del /f /s /q %systemdrive%\*.log 1>nul 2>nul
 del /f /s /q %systemdrive%\*.gid 1>nul 2>nul
 del /f /s /q %systemdrive%\*.chk 1>nul 2>nul
 del /f /s /q %systemdrive%\*.old 1>nul 2>nul
-rem å¸¸è§ç³»ç»Ÿåžƒåœ¾å®Œæˆ
+rem ³£¼ûÏµÍ³À¬»øÍê³É
 
-echo å¸¸è§ç³»ç»Ÿåžƒåœ¾æ¸…ç†å®Œæ¯•!
+echo ³£¼ûÏµÍ³À¬»øÇåÀíÍê±Ï!
 pause 
