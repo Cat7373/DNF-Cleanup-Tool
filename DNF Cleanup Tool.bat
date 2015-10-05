@@ -5,7 +5,7 @@ echo ==========================
 echo =      DNF清理工具       =
 echo = By:Cat73 QQ:1901803382 =
 rem 版本号规则: 更新日期_总第几次更新
-echo =    Ver.20150925_011    =
+echo =    Ver.20151001_012    =
 echo ==========================
 echo.
 
@@ -40,9 +40,10 @@ taskkill /f /im Tencentdl.exe 2>nul
 
 ping 127.0.0.1 -n 2 1>nul 2>nul
 
-del /f /q %windir%\SYSTEM32\ddf.ini 2>nul
-del /f /q %windir%\SYSTEM32\error.dd 2>nul
-del /f /q %windir%\SYSTEM32\TesSafe.sys 2>nul
+del /f /q %windir%\system32\ddf.ini 2>nul
+del /f /q %windir%\system32\error.dd 2>nul
+del /f /q %windir%\system32\TesSafe.sys 2>nul
+mkdir %windir%\system32\TesSafe.sys\ 1>nul 2>nul
 
 if exist "%DNFInstallPath%" (
 	del /f /q %DNFInstallPath%\Tenparty.dat 2>nul
