@@ -17,7 +17,7 @@ for /f "tokens=3*" %%a in (%temp%\_readreg.dat) do (
     set DNFInstallPath=%%a
 )
 del /f /q "%Temp%\_readreg.dat"
-if exist "%DNFInstallPath%" (
+if exist "%DNFInstallPath%\DNF.exe" (
     echo 成功获取DNF安装路径: %DNFInstallPath%
 ) else (
     echo 获取DNF安装路径失败，可能有部分文件无法清理。
@@ -50,7 +50,7 @@ del /f /q %windir%\system32\error.dd 2>nul
 del /f /q %windir%\system32\TesSafe.sys 2>nul
 mkdir %windir%\system32\TesSafe.sys\ 1>nul 2>nul
 
-if exist "%DNFInstallPath%" (
+if exist "%DNFInstallPath%\DNF.exe" (
     del /f /q %DNFInstallPath%\Tenparty.dat 2>nul
     del /f /q %DNFInstallPath%\TenSLX.dat 2>nul
     del /f /q %DNFInstallPath%\TenSP.dat 2>nul
